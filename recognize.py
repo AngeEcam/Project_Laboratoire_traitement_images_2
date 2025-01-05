@@ -1,7 +1,9 @@
 import pytesseract
 import process
 
-pytesseract.pytesseract.tesseract_cmd = r"/opt/homebrew/bin/tesseract"
+#pytesseract.pytesseract.tesseract_cmd = r"/opt/homebrew/bin/tesseract" #for mac OS
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe' #for mac Windows
+
 
 
 def recognize_with_tesseract(image):

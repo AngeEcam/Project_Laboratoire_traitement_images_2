@@ -3,16 +3,19 @@ import cv2
 import numpy as np
 from sklearn.cluster import KMeans
 
-pytesseract.pytesseract.tesseract_cmd = r'\Program Files\Tesseract-OCR\tesseract.exe'
 
+# Les chemins vers les images doivent être ajustés en fonction de votre répertoire de travail.
+#my_Image_2 = r"/Users/spgb/Desktop/Projet_Ishihara/images/Ishihara_2.png"
+#my_Image_3 = r"/Users/spgb/Desktop/Projet_Ishihara/images/Ishihara_3.jpg"
+#my_Image_5 = r"/Users/spgb/Desktop/Projet_Ishihara/images/Ishihara_5.jpg"
+#my_Image_16 = r"/Users/spgb/Desktop/Projet_Ishihara/images/Ishihara_16.jpg"
+#my_Image_74 = r"/Users/spgb/Desktop/Projet_Ishihara/images/Ishihara_74.jpg"
 
-my_Image_2 = r"/Users/spgb/Desktop/Projet_Ishihara/images/Ishihara_2.png"
-my_Image_3 = r"/Users/spgb/Desktop/Projet_Ishihara/images/Ishihara_3.jpg"
-my_Image_5 = r"/Users/spgb/Desktop/Projet_Ishihara/images/Ishihara_5.jpg"
-my_Image_16 = r"/Users/spgb/Desktop/Projet_Ishihara/images/Ishihara_16.jpg"
-my_Image_74 = r"/Users/spgb/Desktop/Projet_Ishihara/images/Ishihara_74.jpg"
-
-
+my_Image_2 = r"C:\Users\Simpa\OneDrive\Desktop\Traitement_image\Project_Laboratoire_traitement_images_2\images\Ishihara_2.png"
+my_Image_3 = r"C:\Users\Simpa\OneDrive\Desktop\Traitement_image\Project_Laboratoire_traitement_images_2\images\Ishihara_3.jpg"
+my_Image_5 = r"C:\Users\Simpa\OneDrive\Desktop\Traitement_image\Project_Laboratoire_traitement_images_2\images\Ishihara_5.jpg"
+my_Image_16 = r"C:\Users\Simpa\OneDrive\Desktop\Traitement_image\Project_Laboratoire_traitement_images_2\images\Ishihara_16.jpg"
+my_Image_74 = r"C:\Users\Simpa\OneDrive\Desktop\Traitement_image\Project_Laboratoire_traitement_images_2\images\Ishihara_74.jpg"
 
 
 my_Image = my_Image_74

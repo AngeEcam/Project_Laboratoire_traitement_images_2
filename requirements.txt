@@ -1,0 +1,26 @@
+# Dépendances Python
+pip install numpy
+pip install opencv-python
+pip install pytesseract
+pip install scikit-learn
+
+# Instructions spécifiques pour utiliser Tesseract :
+
+# 1. Installer Tesseract sur votre système :
+#    - macOS : brew install tesseract
+#    - Linux (Ubuntu) : sudo apt install tesseract-ocr
+#    - Windows : Téléchargez l'installateur ici :
+#      https://github.com/UB-Mannheim/tesseract/wiki
+
+# 2. Ajouter le chemin de Tesseract dans votre variable PATH (Windows uniquement) :
+#    Par défaut : C:\Program Files\Tesseract-OCR\tesseract.exe
+
+# 3. Modifier le fichier recognize.py :
+#    Décommentez et ajustez la ligne suivante en fonction de votre système :
+#    - Windows : pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+#    - macOS/Linux : pytesseract.pytesseract.tesseract_cmd = r"/opt/homebrew/bin/tesseract"
+
+
+# Remarque importante :
+# Les chemins vers les images dans process.py doivent être ajustés en fonction de votre répertoire de travail.
+

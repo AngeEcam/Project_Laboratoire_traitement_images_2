@@ -52,8 +52,8 @@ def process_video(video_source=0):
         # Afficher la frame en temps réel
         cv2.imshow("Flux vidéo - Reconnaissance de chiffres", frame)
 
-        # Quitter avec la touche 'q'
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        # Quitter avec la touche Espace
+        if cv2.waitKey(1) & 0xFF == ord(' '):
             break
 
     cap.release()
