@@ -4,7 +4,7 @@ import recognize
 
 def main():
     # Charger l'image
-    image_path = process.my_Image
+    image_path = process.my_Image #change the path in process.py for the images
     image = process.read(image_path)
 
     # Classifier les tons clairs et foncés
