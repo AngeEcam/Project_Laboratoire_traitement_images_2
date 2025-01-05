@@ -10,13 +10,16 @@ def process_video(video_source=0):
         return
 
     while True:
+        # Lire une frame de la vidéo
         ret, frame = cap.read()
         if not ret:
             print("Fin du flux vidéo.")
             break
 
+        
         frame = cv2.resize(frame, (640, 480))
 
+        
         try:
             # Classifier les tons clairs et foncés
             light_tones, dark_tones = process.classify_tones(frame, n_clusters=2)
@@ -40,20 +43,19 @@ def process_video(video_source=0):
             recognized_digit = recognize.recognize_with_tesseract(inverted_image)
 
             # Ajouter le résultat sur la frame
-            cv2.putText(frame, f" Chiffre reconnu : {recognized_digit}", (50, 50),
+            cv2.putText(frame, f"Chiffre Reconnu : {recognized_digit}", (50, 50),
                         cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
         except Exception as e:
             print(f"Erreur dans le traitement : {e}")
 
-       
+        # Afficher la frame en temps réel
         cv2.imshow("Flux vidéo - Reconnaissance de chiffres", frame)
 
-        # Quitter avec la touche espace
-        if cv2.waitKey(1) & 0xFF == ord(' '):  
+        # Quitter avec la touche 'q'
+        if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
-    
     cap.release()
     cv2.destroyAllWindows()
 
