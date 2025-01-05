@@ -5,9 +5,6 @@ pytesseract.pytesseract.tesseract_cmd = r"/opt/homebrew/bin/tesseract"
 
 
 def recognize_with_tesseract(image):
-    """
-    Utilise Tesseract pour reconnaître un chiffre dans une image prétraitée.
-    """
     # Prétraiter l'image
     processed_image = process.preprocess_for_tesseract(image)
 

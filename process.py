@@ -7,11 +7,15 @@ pytesseract.pytesseract.tesseract_cmd = r'\Program Files\Tesseract-OCR\tesseract
 
 
 my_Image_2 = r"/Users/spgb/Desktop/Projet_Ishihara/images/Ishihara_2.png"
-#my_Image_8 = r"/Users/spgb/Desktop/Projet_Ishihara/images/Ishihara_8.png"
+my_Image_3 = r"/Users/spgb/Desktop/Projet_Ishihara/images/Ishihara_3.jpg"
+my_Image_5 = r"/Users/spgb/Desktop/Projet_Ishihara/images/Ishihara_5.jpg"
+my_Image_16 = r"/Users/spgb/Desktop/Projet_Ishihara/images/Ishihara_16.jpg"
+my_Image_74 = r"/Users/spgb/Desktop/Projet_Ishihara/images/Ishihara_74.jpg"
 
 
-my_Image = my_Image_2
 
+
+my_Image = my_Image_74
 
 def read(img_to_read): 
     image = cv2.imread(img_to_read)
@@ -86,13 +90,7 @@ def invert_image(binary_image):
 
 
 def preprocess_for_tesseract(binary_image):
-    """
-    Prépare une image binaire pour Tesseract :
-    - Redimensionne l'image.
-    - Centre l'image.
-    - Applique un lissage si nécessaire.
-    Retourne une image prête pour la reconnaissance.
-    """
+
     # Redimensionner l'image
     resized_image = cv2.resize(binary_image, (300, 300), interpolation=cv2.INTER_LINEAR)
 
@@ -109,7 +107,6 @@ def preprocess_for_tesseract(binary_image):
     return canvas
 
 def show(img_to_show, title='image'):
-    #cv2.imwrite("/Users/spgb/Desktop/Projet_Ishihara/images/ouput.jpg",img_to_show)
     cv2.imshow(title, img_to_show)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
