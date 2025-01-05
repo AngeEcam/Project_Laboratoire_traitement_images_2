@@ -60,20 +60,20 @@ This project aims to recognize numbers contained in Ishihara test images, a test
 ## **Usage**
 
 ### **1. Image Recognition**
-To recognize a number in an Ishihara image, modify the path in `process.py` or `main.py` and run:
+To recognize a number in an Ishihara image, modify the path in `process.py` and run:
 ```bash
-python main.py
+python static.py
 ```
 
 ### **2. Video Stream Recognition**
 To perform real-time recognition from a camera or video file:
-1. Enable the camera by modifying `video_source` in `main.py`:
+1. Enable the camera by modifying `video_source` in `dynamic.py`:
    ```python
    process_video(video_source=0)  # 0 for camera or path to a video file
    ```
 2. Run the script:
    ```bash
-   python main.py
+   python dynamic.py
    ```
 3. Press Space to exit the video stream.
 
