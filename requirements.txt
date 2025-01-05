@@ -22,5 +22,5 @@ pip install scikit-learn
 
 
 # Remarque importante :
-# Les chemins vers les images dans process.py doivent être ajustés en fonction de votre répertoire de travail.
+# Pour lancer static.py, les chemins vers les images dans process.py doivent être ajustés en fonction de votre répertoire de travail.
 
