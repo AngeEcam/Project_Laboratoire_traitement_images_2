@@ -60,7 +60,7 @@ This project aims to recognize numbers contained in Ishihara test images, a test
 ## **Usage**
 
 ### **1. Image Recognition**
-To recognize a number in an Ishihara image, modify the path in `process.py` and run:
+To recognize a number in an Ishihara image, modify the path in `process.py` for the images and run:
 ```bash
 python static.py
 ```
@@ -104,7 +104,7 @@ Install the following Python libraries (already included in `requirements.txt`):
 ---
 
 ## **Limitations**
-- The quality of results strongly depends on the clarity of the image and the preprocessing accuracy.
+- The quality of results strongly depends on the clarity of the image, the lights and the preprocessing accuracy.
 - Tesseract may struggle with poorly formed numbers or irregular contours.
 
 ---
